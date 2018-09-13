@@ -12,6 +12,7 @@
     <string name="title_activity_login">Sign in</string>
     <string name="user_name">Name</string>
     <string name="user_data">Something something</string>
+    <string name="back">Back</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>

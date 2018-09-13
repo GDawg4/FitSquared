@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.SeekBar
+import android.widget.TextView
 
 class DataInput : AppCompatActivity() {
 
@@ -16,15 +17,18 @@ class DataInput : AppCompatActivity() {
         val inputDataButton = findViewById<Button>(R.id.dataButton)
         val exercise = findViewById<SeekBar>(R.id.par1)
         val weight = findViewById<EditText>(R.id.weightInput)
-        val age = findViewById<EditText>(R.id.exerciseInput)
+        val age = findViewById<EditText>(R.id.ageInput)
+        val currentValue = findViewById<TextView>(R.id.currentValue)
 
         inputDataButton.setOnClickListener {
-            val exercise = exercise.toString().toInt()
+            val exercise = exercise.toString()
             val weight = weight.toString().toFloat()
-            val age = exercise.toString().toInt()
+            val age = age.toString().toInt()
+
+            currentValue.text = exercise
 
             val newUser = User()
-            val intent = Intent(this, User::class.java)
+            val intent = Intent(this, UserActivity::class.java)
             startActivity(intent)
         }
     }
