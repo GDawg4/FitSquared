@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">FitSquared</string>
+    <string name="new_user">Crear</string>
+    <string name="user">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="new_data">Ingresar datos</string>
+    <string name="announcer">Unos datos extra...</string>
+    <string name="parameter1">Something1</string>
+    <string name="parameter2">Something2</string>
+    <string name="parameter3">Something3</string>
+    <string name="defaultImage">Imagen por defecto</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="user_name">Name</string>
+    <string name="user_data">Something something</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
 </resources>
