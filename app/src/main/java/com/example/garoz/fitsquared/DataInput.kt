@@ -14,6 +14,9 @@ class DataInput : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_data_input)
 
+        val email = intent.getStringExtra("email")
+        val password = intent.getStringExtra("password")
+
         val inputDataButton = findViewById<Button>(R.id.dataButton)
         val exercise = findViewById<SeekBar>(R.id.par1)
         val weight = findViewById<EditText>(R.id.weightInput)
@@ -21,13 +24,21 @@ class DataInput : AppCompatActivity() {
         val currentValue = findViewById<TextView>(R.id.currentValue)
 
         inputDataButton.setOnClickListener {
-            val exercise = exercise.toString()
+            val exercise = exercise.toString().toInt()
             val weight = weight.toString().toFloat()
             val age = age.toString().toInt()
 
-            currentValue.text = exercise
-
-            val newUser = User()
+            val newUser = User(
+                    email,
+                    password,
+                    age,
+                    exercise,
+                    "som",
+                    weight
+            )
+            val masterMind = MasterMind(
+                    newUser
+            )
             val intent = Intent(this, UserActivity::class.java)
             startActivity(intent)
         }

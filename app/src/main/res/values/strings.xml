@@ -13,6 +13,9 @@
     <string name="user_name">Name</string>
     <string name="user_data">Something something</string>
     <string name="back">Back</string>
+    <string name="newPersRoutine">Generar una nueva rutina personalizada</string>
+    <string name="newPreRoutine">Buscar una rutina preestablecida</string>
+    <string name="placeHolder">Algo</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>

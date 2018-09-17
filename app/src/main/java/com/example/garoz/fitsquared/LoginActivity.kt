@@ -20,9 +20,11 @@ class MainActivity : AppCompatActivity() {
         val newPassword = findViewById<EditText>(R.id.passwordIn)
 
         newUserButton.setOnClickListener {
-            val newName = newUser.text
+            val newMail = newUser.text
             val newPassword = newPassword.text
             val intent = Intent(this, DataInput::class.java)
+            intent.putExtra("email",newMail)
+            intent.putExtra("password",newPassword)
             startActivity(intent)
         }
     }
