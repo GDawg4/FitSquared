@@ -11,11 +11,11 @@ class UserActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user)
 
+        //val user = MasterMind.getInstance()
         val backButton = findViewById<Button>(R.id.backButton)
 
         backButton.setOnClickListener{
             val intent = Intent(this, Main2Activity::class.java)
-
         }
     }
 }

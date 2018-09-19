@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.SeekBar
 import android.widget.TextView
+import java.io.FileOutputStream
 
 class DataInput : AppCompatActivity() {
 
@@ -40,6 +41,8 @@ class DataInput : AppCompatActivity() {
                     newUser
             )
             val intent = Intent(this, UserActivity::class.java)
+            //intent.putExtra(newUser)
+            //FileOutputStream fos = openFileOutput("filename", MODE_WORLD_WRITEABLE)
             startActivity(intent)
         }
     }
