@@ -1,4 +1,4 @@
-package com.example.garoz.fitsquared
+package com.example.garoz.fitsquared.Classes
 
 class User(
         var email: String,
@@ -7,7 +7,7 @@ class User(
         var levelOfExercise: Int,
         var name: String,
         var weight: Float,
-        val history:History = History()
+        val history: History = History()
 ) {
 
 }

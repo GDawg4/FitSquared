@@ -1,4 +1,4 @@
-package com.example.garoz.fitsquared
+package com.example.garoz.fitsquared.Classes
 
 class DataHolder (
         s: User

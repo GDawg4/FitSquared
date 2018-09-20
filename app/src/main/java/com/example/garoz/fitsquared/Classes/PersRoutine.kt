@@ -1,4 +1,6 @@
-package com.example.garoz.fitsquared
+package com.example.garoz.fitsquared.Classes
+
+import com.example.garoz.fitsquared.Classes.Exercises.Exercise
 
 class PersRoutine{
     var exerciseList: ArrayList<Exercise> = ArrayList()

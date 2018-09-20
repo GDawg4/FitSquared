@@ -1,12 +1,11 @@
-package com.example.garoz.fitsquared
+package com.example.garoz.fitsquared.Activities
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_main.*
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
+import com.example.garoz.fitsquared.R
 
 class MainActivity : AppCompatActivity() {
 

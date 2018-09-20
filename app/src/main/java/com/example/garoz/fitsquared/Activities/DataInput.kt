@@ -1,4 +1,4 @@
-package com.example.garoz.fitsquared
+package com.example.garoz.fitsquared.Activities
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -7,7 +7,9 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.SeekBar
 import android.widget.TextView
-import java.io.FileOutputStream
+import com.example.garoz.fitsquared.Classes.MasterMind
+import com.example.garoz.fitsquared.R
+import com.example.garoz.fitsquared.Classes.User
 
 class DataInput : AppCompatActivity() {
 

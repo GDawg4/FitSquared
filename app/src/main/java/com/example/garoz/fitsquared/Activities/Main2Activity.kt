@@ -1,8 +1,9 @@
-package com.example.garoz.fitsquared
+package com.example.garoz.fitsquared.Activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.garoz.fitsquared.R
 
 class Main2Activity : AppCompatActivity() {
 
