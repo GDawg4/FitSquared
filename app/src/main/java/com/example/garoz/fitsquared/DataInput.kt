@@ -37,12 +37,13 @@ class DataInput : AppCompatActivity() {
                     "som",
                     weight
             )
+
+            //MyApp.ss(newUser)
+
             val masterMind = MasterMind(
                     newUser
             )
             val intent = Intent(this, UserActivity::class.java)
-            //intent.putExtra(newUser)
-            //FileOutputStream fos = openFileOutput("filename", MODE_WORLD_WRITEABLE)
             startActivity(intent)
         }
     }
