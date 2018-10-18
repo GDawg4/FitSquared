@@ -33,19 +33,20 @@ class DataInput : AppCompatActivity() {
 
         button.setOnClickListener {
             val intent = Intent(this, UserActivity::class.java)
-            val ageAsInt = age.text.toString()
+            val ageAsInt = age.text
             val weightAsInt = weight.text
-            val levelOfExerciseAsString = levelOfExercise.toString()
+            val levelOfExerciseAsString = levelOfExercise
             /*
             var newUser = User(
                     email,
                     password,
-                    ageAsInt.toString(),
+                    "",
                     "",
                     "",
                     ""
             )
             */
+            //Users.users.add(newUser)
             startActivity(intent)
         }
 

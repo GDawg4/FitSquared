@@ -18,15 +18,7 @@ class UserActivity : AppCompatActivity() {
 
         val backButton = findViewById<Button>(R.id.backButton)
         val name = findViewById<TextView>(R.id.name)
-        name.text = Users.users[0].name
-        /*
-        val name = findViewById<TextView>(R.id.name)
-        val data = findViewById<TextView>(R.id.data)
-        */
 
-
-        //name.text = MyApp.permUser.name
-        //data.text = MyApp.permUser.age.toString()
 
         backButton.setOnClickListener{
             //val intent = Intent(this, Main2Activity::class.java)
