@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import com.example.garoz.fitsquared.Classes.MyApp
+import com.example.garoz.fitsquared.Classes.Singleton.Users
 import com.example.garoz.fitsquared.Classes.Singletons.userPersistency
 import com.example.garoz.fitsquared.R
 
@@ -16,6 +17,8 @@ class UserActivity : AppCompatActivity() {
         setContentView(R.layout.activity_user)
 
         val backButton = findViewById<Button>(R.id.backButton)
+        val name = findViewById<TextView>(R.id.name)
+        name.text = Users.users[0].name
         /*
         val name = findViewById<TextView>(R.id.name)
         val data = findViewById<TextView>(R.id.data)

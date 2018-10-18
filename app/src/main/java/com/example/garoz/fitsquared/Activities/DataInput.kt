@@ -8,57 +8,46 @@ import android.widget.EditText
 import android.widget.SeekBar
 import android.widget.TextView
 import com.example.garoz.fitsquared.Classes.MasterMind
+import com.example.garoz.fitsquared.Classes.Singleton.Users
 import com.example.garoz.fitsquared.Classes.Singletons.userPersistency
 import com.example.garoz.fitsquared.R
 import com.example.garoz.fitsquared.Classes.User
+import kotlinx.android.synthetic.main.activity_data_input.*
+import kotlinx.android.synthetic.main.activity_data_input.view.*
 
 class DataInput : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_data_input)
+
         val email = intent.getStringExtra("email")
         val password = intent.getStringExtra("password")
 
 
-        val exercise = findViewById<SeekBar>(R.id.par1)
-        val weight = findViewById<EditText>(R.id.weightInput)
+        val levelOfExercise = findViewById<SeekBar>(R.id.par1)
         val age = findViewById<EditText>(R.id.ageInput)
-        val currentValue = findViewById<TextView>(R.id.currentValue)
+        val weight = findViewById<EditText>(R.id.weightInput)
 
+        val button = findViewById<Button>(R.id.dataButton)
 
-        val inputDataButton = findViewById<Button>(R.id.dataButton)
-
-        inputDataButton.setOnClickListener {
-
-
-            //val exercise = exercise.toString().toInt()
-            val weight = weight.toString().toFloat()
-            //val age = age.toString().toInt()
-
-
-
+        button.setOnClickListener {
+            val intent = Intent(this, UserActivity::class.java)
+            val ageAsInt = age.text.toString()
+            val weightAsInt = weight.text
+            val levelOfExerciseAsString = levelOfExercise.toString()
             /*
-            val newUser = User(
+            var newUser = User(
                     email,
                     password,
-                    age,
-                    exercise,
-                    "som",
-                    weight
+                    ageAsInt.toString(),
+                    "",
+                    "",
+                    ""
             )
             */
-
-            //userPersistency.currentUser = newUser
-
-            /*
-            val masterMind = MasterMind(
-                    newUser
-            )
-            */
-
-            val intent = Intent(this, UserActivity::class.java)
             startActivity(intent)
         }
+
     }
 }
