@@ -1,6 +1,6 @@
 package com.example.garoz.fitsquared.Classes
 
-class User(
+data class User(
         var email: String,
         var password:String,
         var age: String,
