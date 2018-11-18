@@ -19,12 +19,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val newUserButton = findViewById<Button>(R.id.newUserButton)
+        val oldUserButton = findViewById<Button>(R.id.oldUserButton)
         val newUser = findViewById<EditText>(R.id.userIn)
         val newPassword = findViewById<EditText>(R.id.passwordIn)
 
         Users.users = ArrayList()
 
         val test = false
+
+        oldUserButton.setOnClickListener {
+            val intent = Intent(this, AllUsersActivity::class.java)
+        }
 
         newUserButton.setOnClickListener {
             val newMail = newUser.text

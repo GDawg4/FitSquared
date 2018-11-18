@@ -2,20 +2,12 @@ package com.example.garoz.fitsquared.Activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
 import com.example.garoz.fitsquared.R
 
-class Main2Activity : AppCompatActivity() {
+class AllUsersActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main2)
-
-        val persButton = findViewById<Button>(R.id.persButton)
-
-        persButton.setOnClickListener{
-
-        }
+        setContentView(R.layout.activity_all_users)
     }
 }

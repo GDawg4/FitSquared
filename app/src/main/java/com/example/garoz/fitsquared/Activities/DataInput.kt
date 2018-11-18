@@ -34,7 +34,7 @@ class DataInput : AppCompatActivity() {
         val weight = findViewById<EditText>(R.id.weightInput)
 
         val button = findViewById<Button>(R.id.dataButton)
-        /*
+
         val user = User(
                 "",
                 "",
@@ -43,7 +43,7 @@ class DataInput : AppCompatActivity() {
                 "",
                 ""
         )
-        */
+
 
         button.setOnClickListener {
             val intent = Intent(this, UserActivity::class.java)
@@ -51,14 +51,15 @@ class DataInput : AppCompatActivity() {
             val weightAsInt = weight.text
             val levelOfExerciseAsString = levelOfExercise
             val user = User(
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    ""
+                    "garoz.r4@gmail.com",
+                    "2x4x6x8x10",
+                    "18",
+                    "3",
+                    "Rodrigo Garoz",
+                    "185"
             )
-            Users.users.add(user)
+           userPersistency.currentUser = user
+
             val newUserAdded = Users.serializeData()
             try {
                 val file = OutputStreamWriter (openFileOutput("test1", Activity.MODE_PRIVATE))
