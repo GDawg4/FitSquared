@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         oldUserButton.setOnClickListener {
             val intent = Intent(this, AllUsersActivity::class.java)
+            startActivity(intent)
         }
 
         newUserButton.setOnClickListener {

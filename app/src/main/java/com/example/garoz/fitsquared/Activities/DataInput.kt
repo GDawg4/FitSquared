@@ -35,30 +35,22 @@ class DataInput : AppCompatActivity() {
 
         val button = findViewById<Button>(R.id.dataButton)
 
-        val user = User(
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-        )
-
 
         button.setOnClickListener {
             val intent = Intent(this, UserActivity::class.java)
-            val ageAsInt = age.text
-            val weightAsInt = weight.text
+            val ageAsInt = age.getText().toString()
+            val weightAsInt = weight.getText().toString()
             val levelOfExerciseAsString = levelOfExercise
-            val user = User(
-                    "garoz.r4@gmail.com",
-                    "2x4x6x8x10",
-                    "18",
-                    "3",
-                    "Rodrigo Garoz",
-                    "185"
+
+            val newUser = User(
+                    "gar",
+                    "asdf",
+                    ageAsInt,
+                    "",
+                    "Garoz",
+                    weightAsInt
             )
-           userPersistency.currentUser = user
+            userPersistency.currentUser = newUser
 
             val newUserAdded = Users.serializeData()
             try {

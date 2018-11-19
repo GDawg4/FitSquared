@@ -39,7 +39,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="@string/parameter1"
+        android:text="Nivel de ejercicio"
         app:layout_constraintBottom_toTopOf="@+id/par1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
-        android:text="@string/parameter2"
+        android:text="Peso"
         app:layout_constraintBottom_toTopOf="@+id/weightInput"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -60,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="16dp"
-        android:text="@string/parameter3"
+        android:text="Edad"
         app:layout_constraintBottom_toTopOf="@+id/ageInput"
         app:layout_constraintStart_toStartOf="parent" />
 
