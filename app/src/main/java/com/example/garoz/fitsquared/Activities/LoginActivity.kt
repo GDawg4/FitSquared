@@ -28,6 +28,15 @@ class MainActivity : AppCompatActivity() {
         val test = false
 
         oldUserButton.setOnClickListener {
+            val testUser = User(
+                    "ga",
+                    "dasf",
+                    "asdfas",
+                    "as",
+                    "Rodrigo",
+                    "asd"
+            )
+            userPersistency.currentUser = testUser
             val intent = Intent(this, AllUsersActivity::class.java)
             startActivity(intent)
         }
