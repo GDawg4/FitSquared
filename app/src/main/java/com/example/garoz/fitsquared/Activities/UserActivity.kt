@@ -21,7 +21,7 @@ class UserActivity : AppCompatActivity() {
         val routineBotton = findViewById<Button>(R.id.rButton)
         var nameO = findViewById<TextView>(R.id.name)
 
-        nameO.text = userPersistency.currentUser?.name
+        nameO.text = userPersistency.currentUser?.userName
 
         routineBotton.setOnClickListener{
             val intent = Intent(this, Main2Activity::class.java)

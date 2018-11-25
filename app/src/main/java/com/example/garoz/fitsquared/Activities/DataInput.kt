@@ -33,28 +33,29 @@ class DataInput : AppCompatActivity() {
         val levelOfExercise = findViewById<SeekBar>(R.id.par1)
         val age = findViewById<EditText>(R.id.ageInput)
         val weight = findViewById<EditText>(R.id.weightInput)
-
+        val height = findViewById<EditText>(R.id.heightInput)
         val button = findViewById<Button>(R.id.dataButton)
 
 
         button.setOnClickListener {
             val intent = Intent(this, UserActivity::class.java)
-            val ageAsInt = age.getText().toString()
-            val weightAsInt = weight.getText().toString()
-            val levelOfExerciseAsString = levelOfExercise
+            val ageAsInt = age.getText().toString().toInt()
+            val weightAsInt = weight.getText().toString().toDouble()
+            val heightAsInt = height.getText().toString().toDouble()
+            val levelOfExerciseAsInt = levelOfExercise.getProgress()
 
             //TODO no olvidar cambiar esto para que acepte los valores externos
             val newUser = User(
-                    "gar",
-                    "asdf",
-                    18,
-                    5,
-                    "",
-                    180F,
-                    1.75F,
+                    email,
+                    password,
+                    ageAsInt,
+                    levelOfExerciseAsInt,
+                    weightAsInt,
+                    heightAsInt,
                     History()
             )
             userPersistency.currentUser = newUser
+            Users.users.add(newUser)
 
             val newUserAdded = Users.serializeData()
             try {

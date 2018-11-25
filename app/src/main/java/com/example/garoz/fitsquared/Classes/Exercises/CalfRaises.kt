@@ -1,6 +1,6 @@
 package com.example.garoz.fitsquared.Classes.Exercises
 
-class CalfRaises:Exercise(
+data class CalfRaises(name = "Calf raises"):Exercise(
         "CalfRaises",
         1,
         10,

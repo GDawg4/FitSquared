@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import com.example.garoz.fitsquared.Activities.UserActivity
+import com.example.garoz.fitsquared.Classes.Singletons.userPersistency
 import com.example.garoz.fitsquared.Classes.User
 import com.example.garoz.fitsquared.R
 import kotlinx.android.synthetic.main.recyclerview_item_row.*
@@ -34,7 +35,7 @@ class UsersAdapter(private val users: ArrayList<User>):RecyclerView.Adapter<User
 
         fun bindUser(user:User){
             this.user = user
-            view.itemDate.text = user.name
+            view.itemDate.text = user.userName
         }
 
         init {
@@ -44,6 +45,7 @@ class UsersAdapter(private val users: ArrayList<User>):RecyclerView.Adapter<User
         override fun onClick(v: View) {
             val context = itemView.context
             val showPhotoIntent = Intent(context,UserActivity::class.java)
+            userPersistency.currentUser = this.user
             showPhotoIntent.putExtra(PHOTO_KEY, "")
             context.startActivity(showPhotoIntent)
         }

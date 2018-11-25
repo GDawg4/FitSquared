@@ -34,13 +34,23 @@ class MainActivity : AppCompatActivity() {
                     "dasf",
                     18,
                     5,
-                    "Rodrigo",
-                    180F,
-                    1.75F,
+                    180.0,
+                    1.75,
+                    History()
+            )
+
+            val testUser2 = User(
+                    "garoz",
+                    "dasf",
+                    18,
+                    5,
+                    180.0,
+                    1.75,
                     History()
             )
             userPersistency.currentUser = testUser
             Users.users.add(testUser)
+            Users.users.add(testUser2)
             val intent = Intent(this, AllUsersActivity::class.java)
             startActivity(intent)
         }
@@ -50,8 +60,8 @@ class MainActivity : AppCompatActivity() {
             val newPassword = newPassword.text
             //TODO serialize and store everything
             val intent = Intent(this, DataInput::class.java)
-            intent.putExtra("email",newMail)
-            intent.putExtra("password",newPassword)
+            //intent.putExtra("email",newMail)
+            //intent.putExtra("password",newPassword)
             startActivity(intent)
         }
     }

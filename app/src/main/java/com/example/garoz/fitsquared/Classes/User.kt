@@ -1,16 +1,15 @@
 package com.example.garoz.fitsquared.Classes
 
 data class User(
-        var email: String,
+        var userName: String,
         var password:String,
         var age: Int,
         var levelOfExercise: Int,
-        var name: String,
-        var weight: Float,
-        var height: Float,
+        var weight: Double,
+        var height: Double,
         val history: History
 ) {
-    var bmi:Float = ((weight*0.453592)/(height*height)).toFloat()
+    var bmi:Double = ((weight*0.453592)/(height*height))
 
     fun classifyAge():Int{
         if (age < 15){
