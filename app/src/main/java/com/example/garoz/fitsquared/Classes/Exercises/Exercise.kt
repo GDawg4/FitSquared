@@ -2,7 +2,7 @@ package com.example.garoz.fitsquared.Classes.Exercises
 
 import kotlin.reflect.KClass
 
-open class Exercise(
+abstract class Exercise(
         var name: String,
         var areaWorked: Int,
         //in seconds
