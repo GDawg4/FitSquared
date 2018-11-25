@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.SeekBar
 import android.widget.TextView
+import com.example.garoz.fitsquared.Classes.History
 import com.example.garoz.fitsquared.Classes.MasterMind
 import com.example.garoz.fitsquared.Classes.Singleton.Users
 import com.example.garoz.fitsquared.Classes.Singletons.userPersistency
@@ -42,13 +43,16 @@ class DataInput : AppCompatActivity() {
             val weightAsInt = weight.getText().toString()
             val levelOfExerciseAsString = levelOfExercise
 
+            //TODO no olvidar cambiar esto para que acepte los valores externos
             val newUser = User(
                     "gar",
                     "asdf",
-                    ageAsInt,
+                    18,
+                    5,
                     "",
-                    "Garoz",
-                    weightAsInt
+                    180F,
+                    1.75F,
+                    History()
             )
             userPersistency.currentUser = newUser
 

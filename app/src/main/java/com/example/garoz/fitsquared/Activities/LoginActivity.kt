@@ -9,6 +9,7 @@ import android.widget.TextView
 import com.example.garoz.fitsquared.Classes.Singleton.Users
 import com.example.garoz.fitsquared.Classes.Singletons.userPersistency
 import com.example.garoz.fitsquared.Classes.User
+import com.example.garoz.fitsquared.Classes.History
 import com.example.garoz.fitsquared.R
 
 class MainActivity : AppCompatActivity() {
@@ -31,12 +32,15 @@ class MainActivity : AppCompatActivity() {
             val testUser = User(
                     "ga",
                     "dasf",
-                    "asdfas",
-                    "as",
+                    18,
+                    5,
                     "Rodrigo",
-                    "asd"
+                    180F,
+                    1.75F,
+                    History()
             )
             userPersistency.currentUser = testUser
+            Users.users.add(testUser)
             val intent = Intent(this, AllUsersActivity::class.java)
             startActivity(intent)
         }

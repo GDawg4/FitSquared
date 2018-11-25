@@ -6,10 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".Activities.AllUsersActivity">
 
-
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/rv"
-        />
+        android:scrollbars="vertical">
+    </android.support.v7.widget.RecyclerView>
+
 </android.support.constraint.ConstraintLayout>
