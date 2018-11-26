@@ -4,8 +4,6 @@ import com.example.garoz.fitsquared.Classes.Exercises.CalfRaises
 import com.example.garoz.fitsquared.Classes.Exercises.Crunches
 import com.example.garoz.fitsquared.Classes.Exercises.Exercise
 
-abstract class PreRoutine(name:String, description:String, listOfExercise: ArrayList<Exercise>){
-    val name = name
-    val description = description
+abstract class PreRoutine(var name:String, var description:String, var listOfExercise: ArrayList<Exercise>){
 
 }
