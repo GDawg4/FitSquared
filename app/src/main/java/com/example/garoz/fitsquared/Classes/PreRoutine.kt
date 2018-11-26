@@ -2,8 +2,8 @@ package com.example.garoz.fitsquared.Classes
 
 import com.example.garoz.fitsquared.Classes.Exercises.Exercise
 
-class  PreRoutine{
-    var name = ""
-    var description = ""
+abstract class PreRoutine(name:String, description:String){
+    val name = name
+    val description = description
     var listOfExercise: ArrayList<Exercise> = ArrayList()
 }

@@ -1,10 +1,10 @@
 package com.example.garoz.fitsquared.Classes.Exercises
 
-class CalfRaises(name:String = "",
-                 areaWorded: Int = 2,
+class CalfRaises(name:String = "Calf Raises",
+                 areaWorked: String = "Pierna",
                  duration : Int = 30,
                  numberOfReps: Int = 5,
                  extraWeight: Boolean = true,
                  description: String = ""
-                 ):Exercise(name, areaWorded, duration, numberOfReps, extraWeight, description) {
+                 ):Exercise(name, areaWorked, duration, numberOfReps, extraWeight, description) {
 }

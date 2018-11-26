@@ -4,7 +4,7 @@ import kotlin.reflect.KClass
 
 abstract class Exercise(
         var name: String,
-        var areaWorked: Int,
+        var areaWorked:String,
         //in seconds
         var duration: Int,
         var numberOfReps: Int,

@@ -27,7 +27,9 @@
             android:label="@string/title_activity_login" />
         <activity android:name=".Activities.UserActivity" />
         <activity android:name=".Activities.Main2Activity" />
-        <activity android:name=".Activities.AllUsersActivity"></activity>
+        <activity android:name=".Activities.PersRoutineActivity" />
+        <activity android:name=".Activities.AllUsersActivity" />
+        <activity android:name=".Activities.RoutinesActivity"></activity>
     </application>
 
 </manifest>

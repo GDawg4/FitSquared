@@ -56,12 +56,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         newUserButton.setOnClickListener {
-            val newMail = newUser.text
-            val newPassword = newPassword.text
+            val newMail = newUser.getText().toString()
+            val newPassword = newPassword.getText().toString()
             //TODO serialize and store everything
             val intent = Intent(this, DataInput::class.java)
-            //intent.putExtra("email",newMail)
-            //intent.putExtra("password",newPassword)
+            intent.putExtra("email",newMail)
+            intent.putExtra("password",newPassword)
             startActivity(intent)
         }
     }
