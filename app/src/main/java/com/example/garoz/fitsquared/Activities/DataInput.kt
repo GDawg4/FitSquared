@@ -27,7 +27,6 @@ class DataInput : AppCompatActivity() {
         setContentView(R.layout.activity_data_input)
 
         val email = intent.getStringExtra("email")
-        val password = intent.getStringExtra("password")
 
 
         val levelOfExercise = findViewById<SeekBar>(R.id.par1)
@@ -47,7 +46,6 @@ class DataInput : AppCompatActivity() {
             //TODO no olvidar cambiar esto para que acepte los valores externos
             val newUser = User(
                     email,
-                    password,
                     ageAsInt,
                     levelOfExerciseAsInt,
                     weightAsInt,

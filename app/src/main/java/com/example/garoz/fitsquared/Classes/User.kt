@@ -2,12 +2,11 @@ package com.example.garoz.fitsquared.Classes
 
 data class User(
         var userName: String,
-        var password:String,
         var age: Int,
         var levelOfExercise: Int,
         var weight: Double,
         var height: Double,
-        val history: History
+        val history: History?
 ) {
     var bmi:Double = ((weight*0.453592)/(height*height))
 
@@ -53,6 +52,17 @@ data class User(
             return 4
         }
     }
+
+    /*
+    constructor():this(
+            "",
+            0,
+            0,
+            0.0,
+            0.0,
+            null
+    )
+    */
 
     fun getDifficultyLevel():Int {
         if (classifyBMI() == 1 || classifyBMI() == 4) {

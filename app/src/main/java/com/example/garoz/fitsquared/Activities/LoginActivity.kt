@@ -11,57 +11,57 @@ import com.example.garoz.fitsquared.Classes.Singletons.userPersistency
 import com.example.garoz.fitsquared.Classes.User
 import com.example.garoz.fitsquared.Classes.History
 import com.example.garoz.fitsquared.R
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.DocumentReference
+import com.google.firebase.firestore.FirebaseFirestore
 
 class MainActivity : AppCompatActivity() {
 
+    var db = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        var newUserL = User(
+                "Rodrigo",
+                12,
+                5,
+                180.0,
+                1.75,
+                History()
+        )
+
+        var dbNew = db.collection("users")
+
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val newUserButton = findViewById<Button>(R.id.newUserButton)
         val oldUserButton = findViewById<Button>(R.id.oldUserButton)
+        val text = findViewById<TextView>(R.id.textView)
+
         val newUser = findViewById<EditText>(R.id.userIn)
-        val newPassword = findViewById<EditText>(R.id.passwordIn)
+
+
+        dbNew.add(newUserL).addOnSuccessListener {
+            text.text = "Yay"
+        }.addOnFailureListener {
+            text.text = "Nay"
+        }
 
         Users.users = ArrayList()
 
         val test = false
 
         oldUserButton.setOnClickListener {
-            val testUser = User(
-                    "ga",
-                    "dasf",
-                    18,
-                    5,
-                    180.0,
-                    1.75,
-                    History()
-            )
-
-            val testUser2 = User(
-                    "garoz",
-                    "dasf",
-                    18,
-                    5,
-                    180.0,
-                    1.75,
-                    History()
-            )
-            userPersistency.currentUser = testUser
-            Users.users.add(testUser)
-            Users.users.add(testUser2)
             val intent = Intent(this, AllUsersActivity::class.java)
             startActivity(intent)
         }
 
         newUserButton.setOnClickListener {
             val newMail = newUser.getText().toString()
-            val newPassword = newPassword.getText().toString()
-            //TODO serialize and store everything
             val intent = Intent(this, DataInput::class.java)
             intent.putExtra("email",newMail)
-            intent.putExtra("password",newPassword)
             startActivity(intent)
         }
     }

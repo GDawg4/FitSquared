@@ -12,9 +12,10 @@ import com.example.garoz.fitsquared.R
 import kotlinx.android.synthetic.main.recyclerview_item_row.*
 import kotlinx.android.synthetic.main.recyclerview_item_row.view.*
 import java.util.*
+import kotlin.collections.ArrayList
 
 
-class UsersAdapter(private val users: ArrayList<User>):RecyclerView.Adapter<UsersAdapter.PhotoHolder>() {
+class UsersAdapter(private val users: ArrayList<User?>):RecyclerView.Adapter<UsersAdapter.PhotoHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):UsersAdapter.PhotoHolder {
         val inflatedView = parent.inflate(R.layout.recyclerview_item_row, false)
         return PhotoHolder(inflatedView)
@@ -33,9 +34,9 @@ class UsersAdapter(private val users: ArrayList<User>):RecyclerView.Adapter<User
         private var view: View = v
         private var user: User? = null
 
-        fun bindUser(user:User){
+        fun bindUser(user:User?){
             this.user = user
-            view.itemDate.text = user.userName
+            view.itemDate.text = user?.userName
         }
 
         init {

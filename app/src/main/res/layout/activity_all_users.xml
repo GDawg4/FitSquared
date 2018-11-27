@@ -13,4 +13,18 @@
         android:scrollbars="vertical">
     </android.support.v7.widget.RecyclerView>
 
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="0px"
+        android:layout_gravity="start"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:text="PRUEBA"
+        android:textAlignment="viewStart"
+        android:textSize="32sp"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="508dp" />
+
 </android.support.constraint.ConstraintLayout>
