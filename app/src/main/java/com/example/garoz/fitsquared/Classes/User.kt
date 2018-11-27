@@ -1,12 +1,12 @@
 package com.example.garoz.fitsquared.Classes
 
 data class User(
-        var userName: String,
-        var age: Int,
-        var levelOfExercise: Int,
-        var weight: Double,
-        var height: Double,
-        val history: History?
+        var userName: String = "",
+        var age: Int = 0,
+        var levelOfExercise: Int = 0,
+        var weight: Double = 0.0,
+        var height: Double = 0.0,
+        val history: History? = null
 ) {
     var bmi:Double = ((weight*0.453592)/(height*height))
 

@@ -5,7 +5,7 @@ import com.example.garoz.fitsquared.Classes.User
 
 object Users:Serializable {
     var newG = Gson()
-    var users: ArrayList<User> = ArrayList()
+    var users: ArrayList<User?> = ArrayList()
     var test = "Hola"
 
     fun serializeData():String{

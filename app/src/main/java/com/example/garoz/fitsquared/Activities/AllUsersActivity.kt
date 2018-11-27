@@ -58,19 +58,10 @@ class AllUsersActivity : AppCompatActivity() {
                     }
                 })
 
-        val prueba = ArrayList<com.example.garoz.fitsquared.Classes.User?>()
-        prueba.add(com.example.garoz.fitsquared.Classes.User(
-                "Jaime",
-                2,
-                3,
-                5.0,
-                6.0,
-                History()
-        ))
-
+        //TODO regresar a intentar recuperar archivos
         linearLayoutManager = LinearLayoutManager(this)
         rv.layoutManager = linearLayoutManager
-        adapter = UsersAdapter(users)
+        adapter = UsersAdapter(Users.users)
         rv.adapter = adapter
         //val nameVariable = findViewById<TextView>(R.id.personTest)
 
